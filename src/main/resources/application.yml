@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: ${SPRING_ACTIVE_PROFILES:}
+  application:
+    name: GraalVm
+  datasource:
+    url: jdbc:sqlite:config.db
+    driver-class-name: org.sqlite.JDBC
+    initialization-mode: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: ${PORT:8085}
+
+config:
+
+
+logging:
+  level:
+    ROOT: info
